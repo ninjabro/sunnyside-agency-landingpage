@@ -141,21 +141,26 @@ li {
 .Services__content {
   display: flex;
   flex-direction: column;
-  padding: 150px 50px 50px 50px;
+  padding: 9.375rem 3.125rem 3.125rem 3.125rem;
   align-items: flex-start;
-  row-gap: 50px;
+  row-gap: 3.125rem;
   margin: 0;
   word-wrap: break-word;
-  margin-left: 50px;
+  margin-left: 3.125rem;
 }
 
 .marketing > h2,
 .Services__content > h2,
-.learn__more {
+.learn__more,
+.graphic__design > h3,
+.photography > h3,
+.testimonials {
   font-family: var(--fraunces);
 }
 .marketing > p,
-.Services__content > p {
+.Services__content > p,
+.graphic__design > p,
+.photography > p {
   font-family: var(--barlow);
 }
 .learn__more {
@@ -184,12 +189,75 @@ li {
   display: flex;
   flex-direction: row;
   max-width: 100vw;
-  max-height: 100%;
+  height: 31.25rem;
 }
 
-.graphic__design {
-  background-image: url(./images/desktop/image-graphic-design.jpg);
+.graphic__design,
+.photography {
   background-repeat: no-repeat;
   background-size: cover;
   max-height: 100%;
+  max-width: 100%;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+.graphic__design {
+  background-image: url(./images/desktop/image-graphic-design.jpg);
+}
+.photography {
+  background-image: url(./images/desktop/image-photography.jpg);
+}
+
+.graphic__design > h3,
+.photography > h3,
+.graphic__design > p,
+.photography > p {
+  position: relative;
+  left: 0.3125rem;
+  top: 18.75rem;
+  text-align: center;
+}
+.graphic__design > p,
+.photography > p {
+  padding: 0 6.25rem;
+  margin-top: 0.625rem;
+  line-height: 1.5rem;
+}
+
+.graphic__design > h3,
+.photography > h3 {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+}
+
+.testimonials__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+  height: 400px;
+}
+.testimonials {
+  color: var(--Grayish-blue);
+  margin-top: 5rem;
+}
+.client {
+  display: flex;
+  flex-direction: row;
+  padding: 0 5rem;
+  margin-top: 3rem;
+  column-gap: 20px;
+}
+.testimonials__wrapper > .client > .client__reviews > img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.client__reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
